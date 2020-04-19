@@ -1,0 +1,58 @@
+.container-footer {
+  width: 310px;
+  font-size: 15px;
+  position: fixed;
+  top: 50px;
+  right: 220px;
+}
+
+.language {
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  align-items: center;
+}
+
+.language span {
+  margin: 0;
+}
+
+.language a {
+  color: #00f;
+}
+
+.copyright {
+  padding: 10px;
+  margin: 0;
+}
+
+.container-footer a {
+  text-decoration: none;
+}
+
+.container-footer a:hover {
+  text-decoration: underline;
+}
+
+.copyright a {
+  color: #616770;
+}
+
+.copyright p {
+  margin: 0;
+  color: #515151;
+}
+
+.btn-add-language {
+  padding: 5px;
+  font-size: 30px;
+}
+
+.btn-add-language:hover {
+  cursor: pointer;
+  color: #ccc;
+  transition: all .3s;
+}

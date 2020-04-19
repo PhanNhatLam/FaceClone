@@ -2,6 +2,7 @@
 @import "left-sidebar.css";
 @import "main-body.css";
 @import "right-sidebar.css";
+@import "footer.css";
 
 * {
 	margin: 0;
