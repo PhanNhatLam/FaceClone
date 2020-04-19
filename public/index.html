@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.14.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.14.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.14.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.14.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.14.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+  </head>
+  <body>
+
+    <div class="header">
+      <div class="container">
+        <div class="header-left">
+          <!-- icon -->
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <!-- search bar -->
+            <div class="search">
+                <input class="search-bar" type="text" placeholder="Tìm kiếm">
+                <div class="search-button">
+                  <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+          <!-- myAvatar -->
+           <div class="avatar">
+              <img src="https://loremflickr.com/100/100" alt="">
+              <a href="#">
+              Lâm
+              </a>
+           </div>
+           <!-- home -->
+           <div class="avatar">
+              <a href="#">
+              Trang chủ
+              </a>
+           </div>
+           <!-- create-something -->
+           <ul class="menu">
+              <li class="has-submenu">
+                 Tạo
+                 <ul class="submenu">
+                    <div class="menu-wrapper">
+                       <li>
+                          <div class="request">
+                             <i class="far fa-flag"></i>
+                             <b>Trang</b>
+                             <p>Kết nối và chia sẽ với khách hàng hoặc fan</p>
+                          </div>
+                       </li>
+                       <li>
+                          <div class="request">
+                             <i class="fas fa-bullhorn"></i>
+                             <b>Quảng cáo</b>
+                             <p>Quảng cáo doanh nghiệp, thương hiệu hoặc tổ chức của bạn</p>
+                          </div>
+                       </li>
+                    </div>
+                 </ul>
+              </li>
+           </ul>
+           <!-- friend-chat-notification -->
+           <ul class="friend-chat-notification">
+              <!-- friend -->
+              <li class="friend-has-submenu">
+                 <i class="fas fa-user-friends"></i>
+                 <ul class="friend-submenu">
+                    <div class="wrapper">
+                       <div class="content">
+                          <span>Lời mời kết bạn</span>
+                       </div>
+                       <a href="#">Tìm bạn bè</a>
+                       <a href="#">Cài đặt</a>
+                    </div>
+                    <li>
+                       <div class="friend-request">
+                          <div class="friend-avatar">
+                             <img src="https://loremflickr.com/50/50" alt="">
+                          </div>
+                          <div class="friend-name">
+                             <a href="#">A Chẩu</a>
+                          </div>
+                          <div class="button">
+                             <input class="btn-accept" type="button" value="Xác nhận">
+                             <input class="btn-delete" type="button" value="Xoá">
+                          </div>
+                       </div>
+                    </li>
+                    <li>
+                       <div class="friend-request">
+                          <div class="friend-avatar">
+                             <img src="https://loremflickr.com/50/50" alt="">
+                          </div>
+                          <div class="friend-name">
+                             <a href="#">A Chẩu</a>
+                          </div>
+                          <div class="button">
+                             <input class="btn-accept" type="button" value="Xác nhận">
+                             <input class="btn-delete" type="button" value="Xoá">
+                          </div>
+                       </div>
+                    </li>
+                 </ul>
+              </li>
+              <!-- chat -->
+              <li class="friend-has-submenu">
+                 <i class="fab fa-facebook-messenger"></i>
+                 <ul class="friend-submenu">
+                    <div class="wrapper">
+                       <div class="content">
+                          <span>Gần đây</span>
+                       </div>
+                       <a href="#">Nhóm mới</a>
+                       <a href="#">Tin nhắn mới</a>
+                    </div>
+                    <li>
+                       <div class="friend-request">
+                          <div class="friend-avatar">
+                             <img src="https://loremflickr.com/50/50" alt="">
+                          </div>
+                          <div class="info">
+                             <p class="name">A Chẩu</p>
+                             <p class="chat">Hello world</p>
+                          </div>
+                          <div class="chat-time">
+                             <p>12:00</p>
+                             <i class="far fa-circle"></i>
+                          </div>
+                       </div>
+                    </li>
+                 </ul>
+              </li>
+              <!-- notification -->
+              <li class="friend-has-submenu">
+                 <i class="fas fa-bell"></i>
+                 <ul class="friend-submenu">
+                    <div class="wrapper">
+                       <div class="content">
+                          <span>Thông báo</span>
+                       </div>
+                       <a href="#">Đánh dấu tất cả là đã đọc</a>
+                       <a href="#">Cài đặt</a>
+                    </div>
+                    <li>
+                       <div class="friend-request">
+                          <div class="friend-avatar">
+                             <img src="https://loremflickr.com/50/50" alt="">
+                          </div>
+                          <div class="info">
+                             <p><b>A Chẩu</b> đã thêm một ảnh</p>
+                             <div class="from-now">
+                                <i class="fas fa-star"></i>
+                                <p>1 giờ</p>
+                             </div>
+                          </div>
+                          <div class="nofi-item">
+                             <img src="https://loremflickr.com/50/50" alt="">
+                          </div>
+                       </div>
+                    </li>
+                 </ul>
+              </li>
+           </ul>
+           <!-- help-exit -->
+           <ul class="friend-chat-notification help-exit">
+              <!-- help -->
+              <li class="friend-has-submenu">
+                 <i class="fas fa-question-circle"></i>
+                 <ul class="friend-submenu help-submenu">
+                    <div class="small-container">
+                       <div class="wrapper help-wrapper">
+                          <div class="content help-content">
+                             <p>Trợ giúp nhanh</p>
+                             <a href="#">Trung tâm trợ giúp</a>
+                          </div>
+                          <input type="text" placeholder="Chúng tôi có thể giúp đỡ bằng cách nào"> 
+                       </div>
+                       <li>
+                          <div class="help-request">
+                             <p>Trang chủ</p>
+                             <p>Dòng thời gian</p>
+                             <p>Quyền riêng tư</p>
+                          </div>
+                       </li>
+                       <li>
+                          <div class="friend-request item2">
+                             <div class="friend-avatar">
+                                <i class="fas fa-lock"></i>
+                             </div>
+                             <div class="help-name">
+                                <p>Kiểm tra riêng tư</p>
+                             </div>
+                          </div>
+                       </li>
+                    </div>
+                 </ul>
+              </li>
+              <!-- exit -->
+              <li class="friend-has-submenu">
+                  <i class="fas fa-sort-down"></i>
+                 <ul class="friend-submenu help-submenu">
+                    <div class="small-container">
+                       <li>
+                          <div class="friend-request">
+                             <a href="#">Quản lý nhóm</a>
+                          </div>
+                       </li>
+                       <li>
+                          <div class="friend-request">
+                             <a href="#">Cài đặt</a>
+                          </div>
+                       </li>
+                       <li>
+                          <div class="friend-request">
+                             <a href="#">Đăng xuất</a>
+                          </div>
+                       </li>
+                    </div>
+                 </ul>
+              </li>
+           </ul>  
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="container-content">
+        <div class="left-sidebar">
+           <!-- hoten -->
+           <div class="item-ls">
+              <div class="icon-ls">
+                 <img src="https://loremflickr.com/20/20" alt="">
+              </div>
+              <div class="title-ls">
+                 <p>Lâm</p>
+              </div>
+              <div class="setting-ls">
+                 <ul class="list-setting-ls">
+                    <li class="has-submenu">
+                       <i class="fas fa-ellipsis-h"></i>
+                       <ul class="submenu-sidebar">
+                          <div class="wrapper">
+                             <li class="content">
+                                <p>Trang cá nhân</p>
+                             </li>
+                          </div>
+                       </ul>
+                    </li>
+                 </ul>
+              </div>
+           </div>
+           <!-- main-menu -->
+           <!-- newfeed -->
+           <div class="list-menu-ls">
+              <div class="item-ls newfeed">
+                 <div class="icon-ls">
+                    <i class="fas fa-newspaper"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>Bảng tin</p>
+                 </div>
+                 <div class="setting-ls">
+                    <ul class="list-setting-ls">
+                       <li class="has-submenu">
+                          <i class="fas fa-ellipsis-h"></i>
+                          <ul class="submenu-sidebar">
+                             <div class="wrapper">
+                                <li class="content">
+                                   <p>Tin nổi bật</p>
+                                </li>
+                                <li class="content">
+                                   <p>Tin gần nhất</p>
+                                </li>
+                             </div>
+                          </ul>
+                       </li>
+                    </ul>
+                 </div>
+              </div>
+              <!-- messenger -->
+              <div class="item-ls">
+                 <div class="icon-ls">
+                    <i class="fab fa-facebook-messenger"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>Messenger</p>
+                 </div>
+              </div>
+              <!-- watch -->
+              <div class="item-ls">
+                 <div class="icon-ls">
+                    <i class="fas fa-tv"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>Watch</p>
+                 </div>
+                 <div class="icon-ls watch">
+                    <i class="fas fa-circle"></i>
+                 </div>
+              </div>
+              <!-- marketplace -->
+              <div class="item-ls">
+                 <div class="icon-ls">
+                    <i class="fas fa-store"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>Marketplace</p>
+                 </div>
+              </div>
+           </div>
+           <!-- loi-tat -->
+           <div class="list-menu-ls">
+              <!-- title-menu -->
+              <div class="title-menu">
+                 <div class="title-menu-name">
+                    <p>Lối tắt</p>
+                 </div>
+                 <div class="title-menu-setting">
+                    <a href="#">Chỉnh sửa</a>
+                 </div>
+              </div>
+              <!-- hoinhom -->
+              <div class="item-ls">
+                 <div class="icon-ls">
+                    <i class="fab fa-android"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>Hội nhóm Android</p>
+                 </div>
+                 <div class="setting-ls">
+                    <ul class="list-setting-ls">
+                       <li class="has-submenu">
+                          <i class="fas fa-ellipsis-h"></i>
+                          <ul class="submenu-sidebar">
+                             <div class="wrapper">
+                                <li class="content">
+                                   <p>Ghim lên đầu</p>
+                                </li>
+                                <li class="content">
+                                   <p>Ẩn khỏi lối tắt</p>
+                                </li>
+                                <li class="content">
+                                   <p>Chỉnh sửa cài đặt</p>
+                                </li>
+                                <li class="content">
+                                   <p>Rời khỏi nhóm</p>
+                                </li>
+                             </div>
+                          </ul>
+                       </li>
+                    </ul>
+                 </div>
+              </div>
+              <!-- hoinhom -->
+              <div class="item-ls">
+                 <div class="icon-ls">
+                    <i class="fas fa-user-md"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>Hội Bác sĩ nhân ái</p>
+                 </div>
+                 <div class="setting-ls">
+                    <ul class="list-setting-ls">
+                       <li class="has-submenu">
+                          <i class="fas fa-ellipsis-h"></i>
+                          <ul class="submenu-sidebar">
+                             <div class="wrapper">
+                                <li class="content">
+                                   <p>Ghim lên đầu</p>
+                                </li>
+                                <li class="content">
+                                   <p>Ẩn khỏi lối tắt</p>
+                                </li>
+                                <li class="content">
+                                   <p>Chỉnh sửa cài đặt</p>
+                                </li>
+                                <li class="content">
+                                   <p>Rời khỏi nhóm</p>
+                                </li>
+                             </div>
+                          </ul>
+                       </li>
+                    </ul>
+                 </div>
+              </div>
+              <!-- hoinhom -->
+              <div class="item-ls">
+                 <div class="icon-ls">
+                    <i class="fas fa-puzzle-piece"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>Xếp hình VN</p>
+                 </div>
+                 <div class="setting-ls">
+                    <ul class="list-setting-ls">
+                       <li class="has-submenu">
+                          <i class="fas fa-ellipsis-h"></i>
+                          <ul class="submenu-sidebar">
+                             <div class="wrapper">
+                                <li class="content">
+                                   <p>Ghim lên đầu</p>
+                                </li>
+                                <li class="content">
+                                   <p>Ẩn khỏi lối tắt</p>
+                                </li>
+                                <li class="content">
+                                   <p>Chỉnh sửa cài đặt</p>
+                                </li>
+                                <li class="content">
+                                   <p>Rời khỏi nhóm</p>
+                                </li>
+                             </div>
+                          </ul>
+                       </li>
+                    </ul>
+                 </div>
+              </div>
+              <!-- hoinhom -->
+              <div class="item-ls">
+                 <div class="icon-ls">
+                    <i class="fas fa-mask"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>AE thiện lành</p>
+                 </div>
+                 <div class="setting-ls">
+                    <ul class="list-setting-ls">
+                       <li class="has-submenu">
+                          <i class="fas fa-ellipsis-h"></i>
+                          <ul class="submenu-sidebar">
+                             <div class="wrapper">
+                                <li class="content">
+                                   <p>Ghim lên đầu</p>
+                                </li>
+                                <li class="content">
+                                   <p>Ẩn khỏi lối tắt</p>
+                                </li>
+                                <li class="content">
+                                   <p>Chỉnh sửa cài đặt</p>
+                                </li>
+                                <li class="content">
+                                   <p>Rời khỏi nhóm</p>
+                                </li>
+                             </div>
+                          </ul>
+                       </li>
+                    </ul>
+                 </div>
+              </div>
+              <!-- hoinhom -->
+              <div class="item-ls">
+                 <div class="icon-ls">
+                    <i class="fas fa-tshirt"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>Bán hàng Online</p>
+                 </div>
+                 <div class="setting-ls">
+                    <ul class="list-setting-ls">
+                       <li class="has-submenu">
+                          <i class="fas fa-ellipsis-h"></i>
+                          <ul class="submenu-sidebar">
+                             <div class="wrapper">
+                                <li class="content">
+                                   <p>Ghim lên đầu</p>
+                                </li>
+                                <li class="content">
+                                   <p>Ẩn khỏi lối tắt</p>
+                                </li>
+                                <li class="content">
+                                   <p>Chỉnh sửa cài đặt</p>
+                                </li>
+                                <li class="content">
+                                   <p>Rời khỏi nhóm</p>
+                                </li>
+                             </div>
+                          </ul>
+                       </li>
+                    </ul>
+                 </div>
+              </div>
+              <!-- xemthem -->
+              <div class="item-ls xemthem">
+                 <div class="icon-ls">
+                    <i class="fas fa-caret-down"></i>
+                 </div>
+                 <div class="title-ls">
+                    <a href="#">Xem thêm...</a>
+                 </div>
+              </div>
+           </div>
+           <!-- kham-pha -->
+           <div class="list-menu-ls">
+              <!-- title-menu -->
+              <div class="title-menu">
+                 <div class="title-menu-name">
+                    <p>Khám phá</p>
+                 </div>
+              </div>
+              <!-- hoinhom -->
+              <div class="item-ls">
+                 <div class="icon-ls">
+                    <i class="fas fa-calendar-check"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>Khám phá</p>
+                 </div>
+              </div>
+              <!-- hoinhom -->
+              <div class="item-ls">
+                 <div class="icon-ls">
+                    <i class="fas fa-users"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>Nhóm</p>
+                 </div>
+              </div>
+              <!-- hoinhom -->
+              <div class="item-ls">
+                 <div class="icon-ls">
+                    <i class="far fa-flag"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>Trang</p>
+                 </div>
+              </div>
+              <!-- hoinhom -->
+              <div class="item-ls">
+                 <div class="icon-ls">
+                    <i class="far fa-heart"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>Trang gây quỹ</p>
+                 </div>
+              </div>
+              <!-- hoinhom -->
+              <div class="item-ls">
+                 <div class="icon-ls">
+                    <i class="far fa-bookmark"></i>
+                 </div>
+                 <div class="title-ls">
+                    <p>Đã lưu</p>
+                 </div>
+              </div>
+              <!-- xemthem -->
+              <div class="item-ls xemthem">
+                 <div class="icon-ls">
+                    <i class="fas fa-caret-down"></i>
+                 </div>
+                 <div class="title-ls">
+                    <a href="#">Xem thêm...</a>
+                 </div>
+              </div>
+           </div>
+        </div>
+
+        <div class="container-body">
+           <!-- create-post -->
+           <div class="create-post">
+              <div class="top-create-post">
+                 <div class="avatar-body">
+                    <a href="#"><img src="https://loremflickr.com/44/44" alt=""></a>
+                 </div>
+                 <div class="input-something-body">
+                    <input type="text" placeholder="Lâm ơi, bạn đang nghĩ gì?">
+                 </div>
+              </div>
+              <div class="bot-create-post">
+                 <div class="item-create-post">
+                    <div class="icon-item-create-post">
+                       <i class="fas fa-image"></i>
+                    </div>
+                    <div class="content-item-create-post">
+                       <p>Ảnh/Video</p>
+                    </div>
+                 </div>
+                 <div class="item-create-post">
+                    <div class="icon-item-create-post">
+                       <i class="fas fa-user-tag"></i>
+                    </div>
+                    <div class="content-item-create-post">
+                       <p>Gắn thẻ bạn bè</p>
+                    </div>
+                 </div>
+                 <div class="item-create-post">
+                    <div class="icon-item-create-post">
+                       <i class="fas fa-laugh"></i>
+                    </div>
+                    <div class="content-item-create-post">
+                       <p>Cảm xúc/Ho...</p>
+                    </div>
+                 </div>
+                 <div class="item-create-post">
+                    <div class="icon-item-create-post">
+                       <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                 </div>
+              </div>
+              <!-- post-place -->
+              <div class="post-place">
+                 <p>sada</p>
+              </div>
+           </div>
+           <!-- story -->
+           <div class="story">
+              <div class="title-menu">
+                 <div class="title-menu-name">
+                    <span>Tin</span>
+                 </div>
+                 <div class="title-menu-setting">
+                    <a href="#">Xem tất cả</a>
+                 </div>
+              </div>
+              <div class="story-all">
+                 <!-- story-yourself -->
+                 <div class="item-story">
+                    <img class="bg-item-story" src="https://loremflickr.com/110/200" alt="">
+                    <div class="overlay">
+                       <div class="avatar-item-story yourself">
+                          <i class="fas fa-plus"></i>
+                       </div>
+                       <div class="friend-name-item-story">
+                          <p>Thêm vào tin</p>
+                       </div>
+                    </div>
+                 </div>
+                 <!-- your friend -->
+                 <div class="item-story">
+                    <img class="bg-item-story" src="https://loremflickr.com/110/200" alt="">
+                    <div class="overlay">
+                       <div class="avatar-item-story">
+                          <img src="https://loremflickr.com/38/38" alt="">
+                       </div>
+                       <div class="friend-name-item-story">
+                          <p>Xuân Mai</p>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="item-story">
+                    <img class="bg-item-story" src="https://loremflickr.com/110/200" alt="">
+                    <div class="overlay">
+                       <div class="avatar-item-story">
+                          <img src="https://loremflickr.com/38/38" alt="">
+                       </div>
+                       <div class="friend-name-item-story">
+                          <p>Lan Anh</p>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="item-story">
+                    <img class="bg-item-story" src="https://loremflickr.com/110/200" alt="">
+                    <div class="overlay">
+                       <div class="avatar-item-story">
+                          <img src="https://loremflickr.com/38/38" alt="">
+                       </div>
+                       <div class="friend-name-item-story">
+                          <p>OFFop</p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <!-- the post -->
+           <div class="the-post">
+              <!-- 1. header-post -->
+              <div class="header-the-post">
+                 <div class="avatar-body">
+                    <img src="https://loremflickr.com/43/43" alt="">
+                 </div>
+                 <div class="name-the-post">
+                    <div class="name-user">
+                       <a href="#">Nguyễn Văn A</a>
+                       <i class="fas fa-caret-right"></i>
+                       <a href="#">Hội Neko-VN</a>
+                    </div>
+                    <div class="time-the-post">
+                       <a href="#">7 giờ</a>
+                       <i class="fas fa-globe"></i>
+                    </div>
+                 </div>
+                 <div class="setting-ls">
+                    <ul class="list-setting-ls">
+                       <li class="has-submenu">
+                          <i class="fas fa-ellipsis-h"></i>
+                          <ul class="submenu">
+                             <div class="wrapper">
+                                <li class="content">
+                                   <div class="icon-content">
+                                      <i class="fas fa-bookmark"></i>
+                                   </div>
+                                   <div class="text-content">
+                                      <p class="big-p">Lưu bài viết</p>
+                                      <p>Thêm vào danh sách mục đã lưu</p>
+                                   </div>
+                                </li>
+                                <li class="content">
+                                   <div class="icon-content">
+                                      <i class="fas fa-times-circle"></i>
+                                   </div>
+                                   <div class="text-content">
+                                      <p class="big-p">Ẩn bài viết</p>
+                                      <p>Ẩn bớt các bài viết tương tự</p>
+                                   </div>
+                                </li>
+                             </div>
+                          </ul>
+                       </li>
+                    </ul>
+                 </div>
+              </div>
+              <!-- 2. text-content-post -->
+              <div class="text-content-post">
+                 <p>Dễ thương quá</p>
+                 <p>ABCXYZ</p>
+              </div>
+              <!-- 3. img-content-post -->
+              <div class="img-content-post">
+                 <img src="https://loremflickr.com/498/400" alt="">
+              </div>
+              <!-- 4. like-cm-share -->
+              <div class="lcs">
+                 <div class="top-lcs">
+                    <div class="icon-top-lcs">
+                       <i class="fab fa-gratipay"></i>
+                       <span>69</span>
+                    </div>
+                    <div class="count-top-lcs">
+                       <p>50 bình luận</p>
+                       <p>20 chia sẻ</p>
+                    </div>
+                 </div>
+                 <div class="bot-lcs">
+                    <div class="button-bot-lcs">
+                       <ul class="list-setting-body">
+                          <li class="body-submenu lcs-submenu">
+                             <div class="icon-bot-lcs">
+                                <i class="far fa-thumbs-up"></i>
+                             </div>
+                             <div class="content-button">
+                                <p>Thích</p>
+                             </div>
+                             <ul class="submenu like-submenu">
+                                <div class="wrapper like-wrapper">
+                                   <li class="content like-content">
+                                      <i class="fab fa-gratipay"></i>
+                                   </li>
+                                   <li class="content like-content">
+                                      <i class="fab fa-gratipay"></i>
+                                   </li>
+                                   <li class="content like-content">
+                                      <i class="fab fa-gratipay"></i>
+                                   </li>
+                                   <li class="content like-content">
+                                      <i class="fab fa-gratipay"></i>
+                                   </li>
+                                   <li class="content like-content">
+                                      <i class="fab fa-gratipay"></i>
+                                   </li>
+                                   <li class="content like-content">
+                                      <i class="fab fa-gratipay"></i>
+                                   </li>
+                                </div>
+                             </ul>
+                          </li>
+                       </ul>
+                    </div>
+                    <div class="button-bot-lcs">
+                       <div class="icon-bot-lcs">
+                          <i class="far fa-comment-alt"></i>
+                       </div>
+                       <div class="content-button">
+                          <p>Bình luận</p>
+                       </div>
+                    </div>
+                    <div class="button-bot-lcs">
+                       <div class="icon-bot-lcs">
+                          <i class="fas fa-share-alt-square"></i>
+                       </div>
+                       <div class="content-button">
+                          <p>Chia sẻ</p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <!-- 5. comments -->
+              <div class="comments">
+                 <div class="title-comment">
+                    <div class="comments-hidden">
+                       <p>Xem các bình luận khác</p>
+                    </div>
+                    <p>4/30</p>
+                 </div>
+                 <!-- comment -->
+                 <div class="comment">
+                    <div class="icon-comment">
+                       <img src="https://loremflickr.com/42/42" alt="">
+                    </div>
+                    <div class="content-comment">
+                       <div class="name-the-post">
+                          <a href="#">Hoàng Thuỳ Linh</a>
+                          <p>Nice ^^! Happy New Year 2020!!!</p>
+                       </div>
+                       <!-- like, reply, time -->
+                       <div class="lrt">
+                          <p>Thích</p>
+                          <p>Trả lời</p>
+                          <p class="lrt-time">2 giờ</p>
+                       </div>
+                    </div>
+                    <div class="setting-ls">
+                       <ul class="list-setting-ls">
+                          <li class="has-submenu">
+                             <i class="fas fa-ellipsis-h"></i>
+                             <ul class="submenu">
+                                <div class="wrapper">
+                                   <li class="content">
+                                      <div class="icon-content">
+                                         <i class="fas fa-times-circle"></i>
+                                      </div>
+                                      <div class="text-content">
+                                         <p>Ẩn bình luận</p>
+                                      </div>
+                                   </li>
+                                   <li class="content">
+                                      <div class="text-content">
+                                         <p>Báo cáo bình luận với quản trị viên của nhóm</p>
+                                      </div>
+                                   </li>
+                                   <li class="content">
+                                      <div class="text-content">
+                                         <p>Tìm hỗ trợ hoặc báo cáo bình luận</p>
+                                      </div>
+                                   </li>
+                                </div>
+                             </ul>
+                          </li>
+                       </ul>
+                    </div>
+                 </div>
+                 <!-- comment -->
+                 <div class="comment">
+                    <div class="icon-comment">
+                       <img src="https://loremflickr.com/42/42" alt="">
+                    </div>
+                    <div class="content-comment">
+                       <div class="name-the-post">
+                          <a href="#">Trần Văn B</a>
+                          <p>Cute!!!</p>
+                       </div>
+                       <!-- like, reply, time -->
+                       <div class="lrt">
+                          <p>Thích</p>
+                          <p>Trả lời</p>
+                          <p class="lrt-time">2 giờ</p>
+                       </div>
+                    </div>
+                    <div class="setting-ls">
+                       <ul class="list-setting-ls">
+                          <li class="has-submenu">
+                             <i class="fas fa-ellipsis-h"></i>
+                             <ul class="submenu">
+                                <div class="wrapper">
+                                   <li class="content">
+                                      <div class="icon-content">
+                                         <i class="fas fa-times-circle"></i>
+                                      </div>
+                                      <div class="text-content">
+                                         <p>Ẩn bình luận</p>
+                                      </div>
+                                   </li>
+                                   <li class="content">
+                                      <div class="text-content">
+                                         <p>Báo cáo bình luận với quản trị viên của nhóm</p>
+                                      </div>
+                                   </li>
+                                   <li class="content">
+                                      <div class="text-content">
+                                         <p>Tìm hỗ trợ hoặc báo cáo bình luận</p>
+                                      </div>
+                                   </li>
+                                </div>
+                             </ul>
+                          </li>
+                       </ul>
+                    </div>
+                 </div>
+                 <!-- comment -->
+                 <div class="comment">
+                    <div class="icon-comment">
+                       <img src="https://loremflickr.com/42/42" alt="">
+                    </div>
+                    <div class="content-comment">
+                       <div class="name-the-post">
+                          <a href="#">Trần Văn B</a>
+                          <p>Cute!!!</p>
+                       </div>
+                       <!-- like, reply, time -->
+                       <div class="lrt">
+                          <p>Thích</p>
+                          <p>Trả lời</p>
+                          <p class="lrt-time">2 giờ</p>
+                       </div>
+                    </div>
+                    <div class="setting-ls">
+                       <ul class="list-setting-ls">
+                          <li class="has-submenu">
+                             <i class="fas fa-ellipsis-h"></i>
+                             <ul class="submenu">
+                                <div class="wrapper">
+                                   <li class="content">
+                                      <div class="icon-content">
+                                         <i class="fas fa-times-circle"></i>
+                                      </div>
+                                      <div class="text-content">
+                                         <p>Ẩn bình luận</p>
+                                      </div>
+                                   </li>
+                                   <li class="content">
+                                      <div class="text-content">
+                                         <p>Báo cáo bình luận với quản trị viên của nhóm</p>
+                                      </div>
+                                   </li>
+                                   <li class="content">
+                                      <div class="text-content">
+                                         <p>Tìm hỗ trợ hoặc báo cáo bình luận</p>
+                                      </div>
+                                   </li>
+                                </div>
+                             </ul>
+                          </li>
+                       </ul>
+                    </div>
+                 </div>
+                 <!-- comment -->
+                 <div class="comment">
+                    <div class="icon-comment">
+                       <img src="https://loremflickr.com/42/42" alt="">
+                    </div>
+                    <div class="content-comment">
+                       <div class="name-the-post">
+                          <a href="#">Trần Văn B</a>
+                          <p>Cute!!!</p>
+                       </div>
+                       <!-- like, reply, time -->
+                       <div class="lrt">
+                          <p>Thích</p>
+                          <p>Trả lời</p>
+                          <p class="lrt-time">2 giờ</p>
+                       </div>
+                    </div>
+                    <div class="setting-ls">
+                       <ul class="list-setting-ls">
+                          <li class="has-submenu">
+                             <i class="fas fa-ellipsis-h"></i>
+                             <ul class="submenu">
+                                <div class="wrapper">
+                                   <li class="content">
+                                      <div class="icon-content">
+                                         <i class="fas fa-times-circle"></i>
+                                      </div>
+                                      <div class="text-content">
+                                         <p>Ẩn bình luận</p>
+                                      </div>
+                                   </li>
+                                   <li class="content">
+                                      <div class="text-content">
+                                         <p>Báo cáo bình luận với quản trị viên của nhóm</p>
+                                      </div>
+                                   </li>
+                                   <li class="content">
+                                      <div class="text-content">
+                                         <p>Tìm hỗ trợ hoặc báo cáo bình luận</p>
+                                      </div>
+                                   </li>
+                                </div>
+                             </ul>
+                          </li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+              <!-- 6. my-comment -->
+              <div class="my-comment">
+                 <div class="avatar-body">
+                    <img src="https://loremflickr.com/40/40" alt="">
+                 </div>
+                 <div class="input-comment">
+                    <input type="text" placeholder="Viết bình luận...">
+                    <div class="icon-input-comment">
+                       <i class="far fa-surprise"></i>
+                       <i class="fas fa-camera-retro"></i>
+                       <i class="far fa-image"></i>
+                       <i class="far fa-sticky-note"></i>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+
+        <div class="container-footer">
+           <div class="language">
+              <div class="language-all">
+                 <span>Việt Nam · </span>
+                 <a href="#">English (US) · </a>
+                 <a href="#">中文(台灣) · </a>
+              </div>
+              <div class="btn-add-language">
+                 <i class="fas fa-plus-square"></i>
+              </div>
+           </div>
+           <div class="copyright">
+              <a href="#">Quyền riêng tư · </a>
+              <a href="#">Điều khoản · </a>
+              <a href="#">Quảng cáo · </a>
+              <p>FaceClone <i class="far fa-copyright"></i> 2020</p>
+           </div>
+        </div>
+
+        <div class="container-rs">
+           <div class="chat-all">
+              <div class="item-chat">
+                 <div class="avatar-chat">
+                    <img src="https://loremflickr.com/100/100" alt="">
+                 </div>
+                 <div class="name-chat">
+                    <p>Nguyễn Gia Hân</p>
+                 </div>
+                 <div class="online-status">
+                    <i class="fas fa-circle"></i>
+                 </div>
+                 <!-- details -->
+                 <div class="details">
+                    <div class="wrapper-chat">
+                       <div class="avatar-chat">
+                          <img src="https://loremflickr.com/100/100" alt="">
+                       </div>
+                       <div class="info-friend">
+                          <!-- name and follow of friend -->
+                          <div class="name-fl-info">
+                             <a href="#">Nguyễn Gia Hân</a>
+                             <p>99 người theo dõi</p>
+                          </div>
+                          <!-- bonus info -->
+                          <div class="bonus-info">
+                             <div class="item-bonus-info">
+                                <i class="fas fa-user-friends"></i>
+                                <p>10 bạn chung bao gồm <a href="#">Nguyễn Văn A</a> và <a href="#">Trần Dần</a></p>
+                             </div>
+                             <div class="item-bonus-info">
+                                <i class="fas fa-home"></i>
+                                <p>Sống tại <a href="#">Thành phố Hồ Chí Minh</a></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="item-chat">
+                 <div class="avatar-chat">
+                    <img src="https://loremflickr.com/100/100" alt="">
+                 </div>
+                 <div class="name-chat">
+                    <p>Nguyễn Gia Hân</p>
+                 </div>
+                 <div class="online-status">
+                    <i class="fas fa-circle"></i>
+                 </div>
+                 <!-- details -->
+                 <div class="details">
+                    <div class="wrapper-chat">
+                       <div class="avatar-chat">
+                          <img src="https://loremflickr.com/100/100" alt="">
+                       </div>
+                       <div class="info-friend">
+                          <!-- name and follow of friend -->
+                          <div class="name-fl-info">
+                             <a href="#">Nguyễn Gia Hân</a>
+                             <p>99 người theo dõi</p>
+                          </div>
+                          <!-- bonus info -->
+                          <div class="bonus-info">
+                             <div class="item-bonus-info">
+                                <i class="fas fa-user-friends"></i>
+                                <p>10 bạn chung bao gồm <a href="#">Nguyễn Văn A</a> và <a href="#">Trần Dần</a></p>
+                             </div>
+                             <div class="item-bonus-info">
+                                <i class="fas fa-home"></i>
+                                <p>Sống tại <a href="#">Thành phố Hồ Chí Minh</a></p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div class="search-my-friend">
+              <i class="fas fa-search"></i>
+              <input type="text" placeholder="Tìm kiếm">
+              <div class="icon-search">
+                 <i class="fas fa-cog"></i>
+                 <i class="fas fa-pen-square"></i>
+                 <i class="fas fa-users"></i>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
