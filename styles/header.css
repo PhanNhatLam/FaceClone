@@ -1,0 +1,390 @@
+.header {
+  background-color: #4267b2;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header-left {
+  display: flex;
+}
+
+.icon {
+  background-color: #ffffff;
+  color: #4267b2;
+  font-size: 20px;
+  height: 25px;
+  padding: 2px 2px 0 10px;
+  margin: 0 5px;
+  display: flex;
+  align-items: flex-end;
+  width: 25px;
+}
+
+.icon:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2px #000;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  height: 25px;
+  padding: 1px 10px;
+}
+
+.search-bar:focus {
+  outline: none;
+}
+
+.search-button {
+  height: 25px;
+  background-color: #ffffff;
+  margin: 0;
+  width: 40px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.search-button:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.search-bar:focus ~ .search-button{
+  background-color: #4080ff;
+  color: #fff;
+}
+
+.header-right {
+  display: flex;
+}
+
+.avatar {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-right: 1px solid #3b5ca0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  height: 24px;
+}
+
+.avatar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.avatar:hover {
+  cursor: pointer;
+  background-color: #385898;
+}
+
+.avatar img {
+  height: 24px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  margin: 0;
+  padding-right: 5px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  border-right: 1px solid #3b5ca0;
+  display: flex;
+}
+
+.has-submenu {
+  position: relative;
+  padding: 5px 10px;
+}
+
+.has-submenu:hover {
+  background-color: #385898;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+  color: #000;
+}
+
+.submenu {
+  width: 500px;
+  list-style: none;
+  padding: 10px;
+  position: absolute;
+  display: none;
+  right: -70px;
+  top: 100%;
+  color: #000;
+}
+
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-wrapper .request {
+  padding: 10px;
+  border: 1px solid #aaa;
+}
+
+.menu-wrapper .request b:hover {
+  cursor: pointer;
+}
+
+.friend-chat-notification {
+  list-style: none;
+  padding: 0;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  border-right: 1px solid #3b5ca0;
+  display: flex;
+}
+
+.friend-has-submenu {
+  position: relative;
+  padding: 5px 10px;
+}
+
+.friend-has-submenu:hover {
+  background-color: #385898;
+}
+
+.friend-submenu {
+  width: 500px;
+  list-style: none;
+  padding: 10px;
+  position: absolute;
+  display: none;
+  right: -70px;
+  top: 100%;
+  color: #000;
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.wrapper span:hover {
+  cursor: pointer;
+}
+
+.wrapper a {
+  padding-left: 10px;
+  color: #00f;
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+
+.friend-has-submenu:hover {
+  color: #fff;
+}
+
+.friend-has-submenu:hover .friend-submenu {
+  display: block;
+}
+
+.friend-request {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.friend-avatar img{
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.friend-name {
+  flex-grow: 1;
+}
+
+.friend-name a {
+  color: #00f;
+  text-decoration: none;
+}
+
+.friend-name a:hover {
+  text-decoration: underline;
+}
+
+.btn-accept {
+  background-color: #4267b2;
+  color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  border: 1px solid #eee;
+}
+
+.btn-accept:hover {
+  background-color: #385898;
+}
+
+.btn-delete {
+  background-color: #fff;
+  color: #000;
+  padding: 5px;
+  font-size: 12px;
+  border: 1px solid #eee;
+}
+
+.btn-delete:hover {
+  background-color: #ddd;
+}
+
+.info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.info .name {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.info .chat {
+  margin: 5px 0;
+}
+
+.chat-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #bbb;
+  font-size: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-time p {
+  font-size: 12px;
+  margin: 0;
+  padding: 10px;
+}
+
+.chat-time i {
+  color: #0f0;
+}
+
+.nofi-info {
+  flex-grow: 1;
+}
+
+.info p {
+  margin: 5px 0;
+}
+
+.info .from-now {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.info .from-now i {
+  color: yellow;
+  margin-right: 5px;
+}
+
+.help-submenu {
+  width: 300px;
+}
+
+.help-wrapper {
+  flex-direction: column;
+}
+
+.help-wrapper .help-content {
+  display: flex;
+  align-items: center;
+}
+
+.help-content p {
+  margin: 5px 0;
+  flex-grow: 1;
+}
+
+.help-wrapper input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+}
+
+.help-request {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ddd;
+  padding: 0 5px;
+  margin-bottom: 5px;
+}
+
+.help-request p {
+  width: 100%;
+  margin: 5px;
+}
+
+.help-request p:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.small-container {
+  border: 1px solid #ddd;
+}
+
+.item2 .friend-avatar{
+  margin-right: 10px;
+}
+
+.friend-request a {
+  text-decoration: none;
+  color: #000;
+}
+
+.friend-request:hover {
+  background-color: #385898;
+}
+
+.friend-request:hover a {
+  color: #fff;
+}
+
+.help-exit {
+  border: none;
+}
