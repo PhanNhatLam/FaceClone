@@ -1,6 +1,7 @@
 @import "header.css";
 @import "left-sidebar.css";
 @import "main-body.css";
+@import "right-sidebar.css";
 
 * {
 	margin: 0;
