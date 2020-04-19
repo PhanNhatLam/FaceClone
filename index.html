@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Facebook Clone</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
+
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="header-left">
+				<!-- icon -->
+			   	<div class="icon">
+			      	<i class="fab fa-facebook-f"></i>
+			   	</div>
+			   	<!-- search bar -->
+			   	<div class="search">
+			      	<input class="search-bar" type="text" placeholder="Tìm kiếm">
+			      	<div class="search-button">
+			         	<i class="fas fa-search"></i>
+			      	</div>
+			   	</div>
+			</div>
+			<div class="header-right">
+				<!-- myAvatar -->
+			   <div class="avatar">
+			      <img src="https://loremflickr.com/100/100" alt="">
+			      <a href="#">
+			      Lâm
+			      </a>
+			   </div>
+			   <!-- home -->
+			   <div class="avatar">
+			      <a href="#">
+			      Trang chủ
+			      </a>
+			   </div>
+			   <!-- create-something -->
+			   <ul class="menu">
+			      <li class="has-submenu">
+			         Tạo
+			         <ul class="submenu">
+			            <div class="menu-wrapper">
+			               <li>
+			                  <div class="request">
+			                     <i class="far fa-flag"></i>
+			                     <b>Trang</b>
+			                     <p>Kết nối và chia sẽ với khách hàng hoặc fan</p>
+			                  </div>
+			               </li>
+			               <li>
+			                  <div class="request">
+			                     <i class="fas fa-bullhorn"></i>
+			                     <b>Quảng cáo</b>
+			                     <p>Quảng cáo doanh nghiệp, thương hiệu hoặc tổ chức của bạn</p>
+			                  </div>
+			               </li>
+			            </div>
+			         </ul>
+			      </li>
+			   </ul>
+			   <!-- friend-chat-notification -->
+			   <ul class="friend-chat-notification">
+			      <!-- friend -->
+			      <li class="friend-has-submenu">
+			         <i class="fas fa-user-friends"></i>
+			         <ul class="friend-submenu">
+			            <div class="wrapper">
+			               <div class="content">
+			                  <span>Lời mời kết bạn</span>
+			               </div>
+			               <a href="#">Tìm bạn bè</a>
+			               <a href="#">Cài đặt</a>
+			            </div>
+			            <li>
+			               <div class="friend-request">
+			                  <div class="friend-avatar">
+			                     <img src="https://loremflickr.com/50/50" alt="">
+			                  </div>
+			                  <div class="friend-name">
+			                     <a href="#">A Chẩu</a>
+			                  </div>
+			                  <div class="button">
+			                     <input class="btn-accept" type="button" value="Xác nhận">
+			                     <input class="btn-delete" type="button" value="Xoá">
+			                  </div>
+			               </div>
+			            </li>
+			            <li>
+			               <div class="friend-request">
+			                  <div class="friend-avatar">
+			                     <img src="https://loremflickr.com/50/50" alt="">
+			                  </div>
+			                  <div class="friend-name">
+			                     <a href="#">A Chẩu</a>
+			                  </div>
+			                  <div class="button">
+			                     <input class="btn-accept" type="button" value="Xác nhận">
+			                     <input class="btn-delete" type="button" value="Xoá">
+			                  </div>
+			               </div>
+			            </li>
+			         </ul>
+			      </li>
+			      <!-- chat -->
+			      <li class="friend-has-submenu">
+			         <i class="fab fa-facebook-messenger"></i>
+			         <ul class="friend-submenu">
+			            <div class="wrapper">
+			               <div class="content">
+			                  <span>Gần đây</span>
+			               </div>
+			               <a href="#">Nhóm mới</a>
+			               <a href="#">Tin nhắn mới</a>
+			            </div>
+			            <li>
+			               <div class="friend-request">
+			                  <div class="friend-avatar">
+			                     <img src="https://loremflickr.com/50/50" alt="">
+			                  </div>
+			                  <div class="info">
+			                     <p class="name">A Chẩu</p>
+			                     <p class="chat">Hello world</p>
+			                  </div>
+			                  <div class="chat-time">
+			                     <p>12:00</p>
+			                     <i class="far fa-circle"></i>
+			                  </div>
+			               </div>
+			            </li>
+			         </ul>
+			      </li>
+			      <!-- notification -->
+			      <li class="friend-has-submenu">
+			         <i class="fas fa-bell"></i>
+			         <ul class="friend-submenu">
+			            <div class="wrapper">
+			               <div class="content">
+			                  <span>Thông báo</span>
+			               </div>
+			               <a href="#">Đánh dấu tất cả là đã đọc</a>
+			               <a href="#">Cài đặt</a>
+			            </div>
+			            <li>
+			               <div class="friend-request">
+			                  <div class="friend-avatar">
+			                     <img src="https://loremflickr.com/50/50" alt="">
+			                  </div>
+			                  <div class="info">
+			                     <p><b>A Chẩu</b> đã thêm một ảnh</p>
+			                     <div class="from-now">
+			                        <i class="fas fa-star"></i>
+			                        <p>1 giờ</p>
+			                     </div>
+			                  </div>
+			                  <div class="nofi-item">
+			                     <img src="https://loremflickr.com/50/50" alt="">
+			                  </div>
+			               </div>
+			            </li>
+			         </ul>
+			      </li>
+			   </ul>
+			   <!-- help-exit -->
+			   <ul class="friend-chat-notification help-exit">
+			      <!-- help -->
+			      <li class="friend-has-submenu">
+			         <i class="fas fa-question-circle"></i>
+			         <ul class="friend-submenu help-submenu">
+			            <div class="small-container">
+			               <div class="wrapper help-wrapper">
+			                  <div class="content help-content">
+			                     <p>Trợ giúp nhanh</p>
+			                     <a href="#">Trung tâm trợ giúp</a>
+			                  </div>
+			                  <input type="text" placeholder="Chúng tôi có thể giúp đỡ bằng cách nào"> 
+			               </div>
+			               <li>
+			                  <div class="help-request">
+			                     <p>Trang chủ</p>
+			                     <p>Dòng thời gian</p>
+			                     <p>Quyền riêng tư</p>
+			                  </div>
+			               </li>
+			               <li>
+			                  <div class="friend-request item2">
+			                     <div class="friend-avatar">
+			                        <i class="fas fa-lock"></i>
+			                     </div>
+			                     <div class="help-name">
+			                        <p>Kiểm tra riêng tư</p>
+			                     </div>
+			                  </div>
+			               </li>
+			            </div>
+			         </ul>
+			      </li>
+			      <!-- exit -->
+			      <li class="friend-has-submenu">
+			   	      <i class="fas fa-sort-down"></i>
+			         <ul class="friend-submenu help-submenu">
+			            <div class="small-container">
+			               <li>
+			                  <div class="friend-request">
+			                     <a href="#">Quản lý nhóm</a>
+			                  </div>
+			               </li>
+			               <li>
+			                  <div class="friend-request">
+			                     <a href="#">Cài đặt</a>
+			                  </div>
+			               </li>
+			               <li>
+			                  <div class="friend-request">
+			                     <a href="#">Đăng xuất</a>
+			                  </div>
+			               </li>
+			            </div>
+			         </ul>
+			      </li>
+			   </ul>	
+			</div>
+		</div>
+	</div>
+</body>
+</html>
