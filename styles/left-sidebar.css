@@ -1,10 +1,9 @@
 .main-content {
   background-color: #e9ebee;
-  width: 100vw;
 }
 
 .container-content {
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
 }
