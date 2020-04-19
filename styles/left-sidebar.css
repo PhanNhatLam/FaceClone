@@ -11,6 +11,8 @@
 
 .left-sidebar {
   max-width: 200px;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .item-ls {
@@ -42,7 +44,6 @@
 .item-ls:hover {
   box-sizing: border-box;
   background-color: #fff;
-  border: 1px solid #ccc;
   cursor: pointer;
 }
 
