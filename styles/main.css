@@ -1,7 +1,13 @@
 @import "header.css";
+@import "left-sidebar.css";
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+body {
+	font-size: 13px;
+	font-family: Arial, sans-serif;
 }
