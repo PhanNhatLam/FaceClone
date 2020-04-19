@@ -1,0 +1,184 @@
+.main-content {
+  background-color: #e9ebee;
+  width: 100vw;
+}
+
+.container-content {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.left-sidebar {
+  max-width: 200px;
+}
+
+.item-ls {
+  background-color: #e9ebee;
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+.icon-ls {
+  padding-left: 10px;
+  font-size: 18px;
+  color: blue;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+.title-ls {
+  padding: 5px;
+  flex-grow: 1;
+}
+
+.list-setting-ls {
+  padding: 5px;
+  display: none;
+}
+
+.item-ls:hover {
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.item-ls:hover .list-setting-ls {
+  display: block;
+}
+
+.icon-ls img {
+  border-radius: 10px;
+}
+
+.title-ls p {
+  margin: 0;
+}
+
+.setting-ls {
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.setting-ls .list-setting-ls {
+  list-style: none;
+  padding: 0;
+}
+
+.has-submenu {
+  position: relative;
+  padding: 0 5px;
+  line-height: 25px;
+}
+
+.submenu-sidebar {
+  width: 200px;
+  list-style: none;
+  padding: 10px;
+  position: absolute;
+  display: none;
+  right: -10px;
+  top: 100%;
+  color: #000;
+}
+
+.wrapper {
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.content {
+  padding: 2px;
+  margin: 2px;
+}
+
+.content p{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.wrapper:hover .content:hover {
+  background-color: #385898;
+  color: #fff;
+}
+
+.list-setting-ls:hover .submenu-sidebar {
+  display: block;
+}
+
+.list-menu-ls {
+  margin: 5px 0;
+  padding: 5px 0;
+}
+
+.list-menu-ls .item-ls{
+  margin: 0;
+}
+
+.newfeed:hover .title-ls {
+  font-weight: bold;
+}
+
+.icon-ls ~ .watch {
+  color: red;
+  font-size: 8px;
+}
+
+.title-menu {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 5px;
+  height: 30px;
+  width: 195px;
+}
+
+.title-menu-name {
+  flex-grow: 1;
+  color: #616770;
+  font-size: 14px;
+}
+
+.title-menu-setting {
+  display: none;
+}
+
+.title-menu-setting a {
+  text-decoration: none;
+  color: #00F;
+}
+
+.list-menu-ls:hover .title-menu-setting {
+  display: block;
+}
+
+.title-menu-setting:hover a {
+  text-decoration: underline;
+}
+
+.list-menu-ls .submenu {
+  width: 140px;
+}
+
+.xemthem a {
+  text-decoration: none;
+  color: #00F;
+}
+
+.xemthem:hover {
+  background-color: #e9ebee;
+  border: none;
+  text-decoration: underline;
+}
+
+.xemthem .icon-ls i {
+  padding: 3px 5px;
+}
