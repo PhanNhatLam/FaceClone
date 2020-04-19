@@ -1,6 +1,8 @@
 .header {
   background-color: #4267b2;
   width: 100vw;
+  position: fixed;
+  z-index: 100;
 }
 
 .container {
@@ -139,6 +141,7 @@
 .menu-wrapper {
   display: flex;
   flex-direction: column;
+  background: #fff;
 }
 
 .menu-wrapper .request {
@@ -220,6 +223,7 @@
   align-items: center;
   padding: 10px;
   border: 1px solid #ddd;
+  background: #fff;
 }
 
 .friend-avatar img{
@@ -352,6 +356,7 @@
   border: 1px solid #ddd;
   padding: 0 5px;
   margin-bottom: 5px;
+  background: #fff;
 }
 
 .help-request p {
